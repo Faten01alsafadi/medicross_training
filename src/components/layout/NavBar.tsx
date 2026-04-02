@@ -5,7 +5,7 @@ import { ROUTES } from "../../constants/router";
 
 function NavBar() {
   return (
-    <div className="flex gap-x-10 text-[var(--main-text)]">
+    <div className="flex p-2  gap-x-10 bg-[var(--color-bg)] ">
 
       nav
       <ul className="flex gap-1.5">
