@@ -4,8 +4,10 @@ import Button from "../../components/ui/Button";
 import Slider from "@/components/common/Slider";
 import { homeContents } from "@/data/contents/HomeContents";
 import AppointmentForm from "@/features/appointments/components/AppointmentForm";
+import Services from "./sections/Services";
+import Hero from "./sections/Hero";
 
-function Home() {
+function Home() { 
   return (
     <div className=" ">
       home
@@ -20,6 +22,8 @@ function Home() {
         )}
       />
    <AppointmentForm/>
+   <Hero/>
+   <Services/>
     </div>
   );
 }

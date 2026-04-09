@@ -1,4 +1,6 @@
-import { useState } from "react"
+
+import Button from "@/components/ui/Button"
+import useAppointment from "../hooks/useAppointment"
 
 const doctors=[
     {
@@ -21,46 +23,36 @@ const services=[
 ]
 
 function AppointmentForm() {
-    const [form,setForm]=useState(
-        {
-            name:"",
-            email:"",
-            phone:"",
-            service:"",
-            doctor:"",
-            date:""
-            
-        }
-    )
-    const handleChange =()=>{
-
-    }
+const {form,handleChange,handleSubmit}=useAppointment()
+ 
+  
+   
  
   return (
     <section>
       <h2>book</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-<form action="">
-    <input onChange={handleChange} type="text" placeholder="name" required/>
-    <input onChange={handleChange} type="email" name="" id="" placeholder="email"/>
-    <input onChange={handleChange} type="tel" placeholder="phone"/>
-    <select name="" id="">
+<form action="" onSubmit={handleSubmit}>
+    <input onChange={handleChange} value={form.name} type="text" name="name" placeholder="name" required/>
+    <input onChange={handleChange} value={form.email} type="email" name="email" id="" placeholder="email"/>
+    <input onChange={handleChange} value={form.phone} name="phone" type="tel" placeholder="phone"/>
+    <select value={form.service} name="service" id="" onChange={handleChange}>
         <option value="">select service</option>
         { services.map((service,index)=>( 
-<option value="" key={index}> {service.name}</option>
+<option value={service.name} key={index}> {service.name}</option>
         ))}
          
   
     </select>
-    <select name="" id="" onChange={handleChange}>
+    <select value={form.doctor} name="doctor" id="" onChange={handleChange}>
         <option value="">select doctor</option>
 {doctors.map((doctor,index)=>(
-    <option value="" key={index}>{doctor.name}</option>
+    <option value={doctor.name} key={index}>{doctor.name}</option>
 ))} 
 
     </select>
-    <input type="date" />
-    <button type="submit">Book Appointment</button>
+    <input onChange={handleChange} value={form.date} name="date" type="date" />
+<Button type="submit" variant="secondary" className=" bg-[var(--color-primary)] ">complete appointment</Button>
 </form>
     </section>
   )

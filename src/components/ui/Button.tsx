@@ -7,14 +7,15 @@ variant?:"primary"|"secondary",
 disabled?:boolean,
 to?:string,
 onclick?:()=>void
+type?:"submit"|"button"|"reset";
 
 }
-function Button({children,className,variant="primary",disabled,to,onclick}:ButtonProps) {
+function Button({children,className,variant="primary",disabled,to,onclick,type}:ButtonProps) {
   const styles={
-primary:"border-gray-500 border-1  rounded-xl",
-secondary:"rounded-[50%] w-26 h-26"
+primary:"border-gray-500 border-1  ",
+secondary:"rounded-[50%] w-30 h-30 text-center"
   }
-  const base ="px-4 py-2  text-white"
+  const base ="px-4 py-2  text-white cursor-pointer"
   if(to){
   return(
     <Link className={`${base} ${className} ${styles[variant]}`}  to={to}>
@@ -25,7 +26,7 @@ secondary:"rounded-[50%] w-26 h-26"
 
   return (
     <div>
-      <button onClick={onclick} disabled={disabled} className={`${base} ${className} ${styles[variant]}`}>{children}</button>
+      <button type={type||"button"} onClick={onclick} disabled={disabled} className={`${base} ${className} ${styles[variant]}`}>{children}</button>
     </div>
   )
 }
