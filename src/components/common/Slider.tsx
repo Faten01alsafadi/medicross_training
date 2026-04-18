@@ -1,5 +1,5 @@
 
-import { useState, type ReactNode,  } from "react"
+import {  useState, type ReactNode,  } from "react"
 interface sliderProps<T>{
     renderSlider:(item:T)=>ReactNode; 
     slides:T[] 
@@ -9,6 +9,7 @@ interface sliderProps<T>{
 
 function Slider<T>({renderSlider, slides}:sliderProps<T>) {
     const [current,setCurrent]=useState(0);
+
   return (
     <div>
         <div className="flex gap-6">
