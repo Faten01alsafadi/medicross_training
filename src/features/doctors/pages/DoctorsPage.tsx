@@ -1,5 +1,6 @@
 
-import React, { useState } from 'react' 
+
+import { useDoctorFilter } from '../hooks/useDoctorFilter'
 const doctors =[
   {
     id:1,
@@ -22,17 +23,22 @@ const doctors =[
 function DoctorsPage() {
 
 
+const {   search,
+      setSearch,
+      setSelect,
+      filteredDoctors
+    }=useDoctorFilter(doctors)
 
 
-
-  const [select, setSelect] = useState(""); 
-   const [search, setSearch] = useState(""); 
-//    const filteredDoctors =()=>{
-//   return(doctors.filter((doctor)=>select===""? true:doctor.department===select) )
-//   doctors.filter((doctor)=>doctor.name.toLowerCase().includes(search.toLowerCase())) 
-// }      
-const filteredDoctors =   doctors.filter((doctor)=>select===""? true:doctor.department===select) 
-  doctors.filter((doctor)=>doctor.name.toLowerCase().includes(search.toLowerCase()))                                                                                
+//   const [select, setSelect] = useState(""); 
+//    const [search, setSearch] = useState(""); 
+//    const filteredDoctors =
+// doctors.filter((doctor)=>(select===""? true:doctor.department===select) &&
+//    (doctor.name.toLowerCase().includes(search.toLowerCase()))) 
+// doctors.filter((doctor)=>doctor.name.toLowerCase().includes(search.toLowerCase())) 
+    
+// const filteredDoctors =   doctors.filter((doctor)=>select===""? true:doctor.department===select) 
+//   doctors.filter((doctor)=>doctor.name.toLowerCase().includes(search.toLowerCase()))                                                                                
  
             
   return (

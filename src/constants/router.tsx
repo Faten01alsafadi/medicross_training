@@ -3,6 +3,7 @@ export const ROUTES ={
     HOME:"/",
     ABOUT:"/about",
     CONTACT:"/contact",
+    SERVICES:"/services",
     // features pages
     DOCTORS:"/doctors",
     DOCTOR_DETAILS:(id:number|string)=>`/doctors/${id}`,

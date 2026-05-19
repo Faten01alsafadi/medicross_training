@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../../pages/home/Home';
 import About from '../../pages/about/About';
 import Contact from '../../pages/contact/Contact';
+import Services from '../../pages/services/Services';
 import { ROUTES } from '../../constants/router';
 import DoctorsPage from '../../features/doctors/pages/DoctorsPage';
 // import DoctorDetails from '../../features/doctors/pages/DoctorDetails';
@@ -19,6 +20,7 @@ const AppRouter: React.FC= () => {
     <Route path={ROUTES.HOME} element={<Home />}/>
     <Route path={ROUTES.ABOUT} element ={<About/>}/>
     <Route path={ROUTES.CONTACT} element={<Contact/>}/>
+    <Route path={ROUTES.SERVICES} element={<Services/>}/>
     {/* features page */}
     <Route path={ROUTES.DOCTORS} element={<DoctorsPage/>}/>
     {/* <Route path={ROUTES.DOCTOR_DETAILS} element={<DoctorDetails/>}/> */}

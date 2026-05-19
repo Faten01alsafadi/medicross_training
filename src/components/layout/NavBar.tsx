@@ -29,6 +29,9 @@ function NavBar() {
         <li>
           <Link to={ROUTES.DOCTORS}>doctors</Link>
         </li>
+           <li>
+          <Link to={ROUTES.SERVICES}>services</Link>
+        </li>
       </ul>
       <Button   to="/doctors" children="click" className="bg-amber-400 " variant="primary"/>
       <button onClick={handleMenuClick} className="block sm:hidden">Menu</button>
