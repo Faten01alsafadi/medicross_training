@@ -1,0 +1,23 @@
+{
+"doctors":[{
+    "id":1 ,
+    "name":"Dr. sara",
+    "speciality":" Obstetrics",
+    "image":"https://demo.casethemes.net/medicross/wp-content/uploads/2024/09/dt2.webp"
+},
+{
+    "id":2 ,
+    "name":"Dr. anas",
+    "speciality":" Gynecologist ",
+    "image":"https://demo.casethemes.net/medicross/wp-content/uploads/2024/09/dt3.webp"
+},
+{
+    "id":3 ,
+    "name":"Dr. sophia",
+    "speciality":" Gynecologist ",
+    "image":"https://demo.casethemes.net/medicross/wp-content/uploads/2024/09/dt8.webp"
+}
+],
+"appointments":[]
+
+}

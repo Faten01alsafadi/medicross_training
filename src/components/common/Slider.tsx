@@ -3,7 +3,7 @@ import {  useState, type ReactNode,  } from "react"
 interface sliderProps<T>{
     renderSlider:(item:T)=>ReactNode; 
     slides:T[] 
-    dot:boolean
+    dot?:boolean
 }  
 
 
